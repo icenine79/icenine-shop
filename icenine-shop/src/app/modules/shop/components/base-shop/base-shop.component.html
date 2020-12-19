@@ -16,6 +16,21 @@
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let f of filteredProducts">
         {{f.name}}
+        {{f.imageUrl}}
+        <button class="btn btn-danger" (click)="addToCart(f)">Add to Cart</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2" *ngIf="productInCart">
+    <h3>Products in Cart:</h3>
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let p of productInCart">
+        {{p.name}}
+
+        <button class="btn btn-danger" (click)="removeFromCart(p.id)">Remove from Cart</button>
       </li>
     </ul>
   </div>

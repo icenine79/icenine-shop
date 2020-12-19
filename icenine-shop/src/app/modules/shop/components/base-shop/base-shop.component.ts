@@ -1,7 +1,7 @@
+import { Product } from './../../models/Product';
 import { Category } from './../../models/Categories';
 import { ShopService } from './../../services/shop.service';
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../models/Product';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -14,6 +14,7 @@ categories:Category[]=[];
 products:Product[]=[];
 filteredProducts:Product[]=[]
 category:string;
+productInCart:Product[]=[];
   constructor(private shopService:ShopService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -30,6 +31,7 @@ category:string;
     this.shopService.getProducts()
     .subscribe(data=>{
       this.products=this.filteredProducts=data['products'];
+      console.log(this.products)
     })
 
   }
@@ -38,4 +40,19 @@ productFilter(){
   this.products.filter(p=>p.category===this.category):
   this.products;
 }
+
+//Add to Cart
+
+addToCart(product:Product){
+this.productInCart.push(product)
+console.log(this.productInCart)
+
+}
+
+removeFromCart(id:string){
+  this.productInCart=this.productInCart.filter(p=>p.id!==id)
+
+}
+
+
 }

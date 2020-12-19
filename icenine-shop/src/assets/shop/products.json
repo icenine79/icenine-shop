@@ -8,7 +8,7 @@
         "imageUrl":"./assets/images/ps5.jpeg"
       },
       {
-        "id":"3",
+        "id":"2",
         "name":"Wipe Out",
         "category":"games",
         "description":"First person shooter",
@@ -16,9 +16,57 @@
       },
       {
         "id":"3",
-        "name":"The fourth republic",
+        "name":"Alien Invasion",
+        "category":"games",
+        "description":"...",
+        "imageUrl":"./assets/images/fourth_republic.png"
+      },
+      {
+        "id":"4",
+        "name":"PlayStation4",
+        "category":"electronics",
+        "description":"...",
+        "imageUrl":"./assets/shop/ps4.jpg"
+      },
+      {
+        "id":"5",
+        "name":"Commodore Amiga 500",
+        "category":"electronics",
+        "description":"...",
+        "imageUrl":"./assets/shop/amiga500.jpg"
+      },
+      {
+        "id":"6",
+        "name":"Commodore 64",
+        "category":"electronics",
+        "description":"...",
+        "imageUrl":"./assets/shop/c64.jpeg"
+      },
+      {
+        "id":"7",
+        "name":"ZX Spectrum 48k",
+        "category":"electronics",
+        "description":"...",
+        "imageUrl":"./assets/shop/ZXSpectrum48k.jpg"
+      },
+      {
+        "id":"8",
+        "name":"O Verão de 79",
         "category":"books",
-        "description":"A fiction story about the las 45 years in democracy",
+        "description":"...",
+        "imageUrl":"./assets/images/fourth_republic.png"
+      },
+      {
+        "id":"9",
+        "name":"Flashback",
+        "category":"games",
+        "description":"...",
+        "imageUrl":"./assets/images/fourth_republic.png"
+      }, {
+        "id":"10",
+        "name":"Abither World",
+        "category":"games",
+        "description":"...",
         "imageUrl":"./assets/images/fourth_republic.png"
       }
     ]
