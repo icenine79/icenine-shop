@@ -33,8 +33,9 @@
         "name":"Commodore Amiga 500",
         "category":"electronics",
         "description":"...",
-        "imageUrl":"./assets/shop/amiga500.jpg"
+        "imageUrl":"./images/amiga500.jpg"
       },
+
       {
         "id":"6",
         "name":"Commodore 64",

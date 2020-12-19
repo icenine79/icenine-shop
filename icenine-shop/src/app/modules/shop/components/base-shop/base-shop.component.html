@@ -16,7 +16,7 @@
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let f of filteredProducts">
         {{f.name}}
-        {{f.imageUrl}}
+        <img src="{{f.imageUrl}}" class="img-fluid">
         <button class="btn btn-danger" (click)="addToCart(f)">Add to Cart</button>
       </li>
     </ul>
