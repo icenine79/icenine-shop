@@ -26,7 +26,7 @@ successMessage:boolean=false;
 
 
         setTimeout(()=>{                           //<<<---using ()=> syntax
-          this.router.navigate(['/login'])
+          this.router.navigate(['/shop'])
 
         }, 4000);
       }
@@ -39,7 +39,7 @@ get password(){return this.registerForm.get('password')}
 
 
 onSubmit(){
- // this.auth.register(this.name.value,this.email.value,this.password.value);
+  this.auth.register(this.name.value,this.email.value,this.password.value);
   this.registerForm.reset();
 
 }

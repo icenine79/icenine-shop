@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6 offset-md-3">
     <ul class="list-group">
       <a
         *ngFor="let c of categories"
@@ -12,16 +12,29 @@
       </a>
     </ul>
   </div>
-  <div class="col-md-6">
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let f of filteredProducts">
-        {{f.name}}
-        <img src="{{f.imageUrl}}" class="img-fluid">
-        <button class="btn btn-danger" (click)="addToCart(f)">Add to Cart</button>
-      </li>
-    </ul>
+  </div>
+  <div class="row">
+  <div class="col-md-4" *ngFor="let f of filteredProducts">
+    <div >
+    <mat-card class="example-card mat-elevation-z8" >
+      <mat-card-header>
+        <mat-card-title>{{f.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{f.imageUrl}}">
+      <mat-card-content>
+        <p>
+         {{f.description}}
+         {{f.category}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="addToCart(f)">Add to Cart</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-2" *ngIf="productInCart">
     <h3>Products in Cart:</h3>
@@ -29,7 +42,7 @@
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let p of productInCart">
         {{p.name}}
-
+        <img src="{{p.imageUrl}}" class="img-fluid">
         <button class="btn btn-danger" (click)="removeFromCart(p.id)">Remove from Cart</button>
       </li>
     </ul>

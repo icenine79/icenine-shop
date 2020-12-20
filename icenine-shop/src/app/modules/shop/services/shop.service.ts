@@ -12,11 +12,11 @@ export class ShopService {
   constructor(private http:HttpClient) { }
 
 getCategories():Observable<Category[]>{
-  return this.http.get<Category[]>('assets/shop/categories.json');
+  return this.http.get<Category[]>('assets/categories.json');
 }
 
 getProducts():Observable<Product[]>{
-  return this.http.get<Product[]>('assets/shop/products.json');
+  return this.http.get<Product[]>('assets/products.json');
 }
 
 
